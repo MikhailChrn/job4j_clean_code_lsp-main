@@ -1,6 +1,8 @@
 package ru.job4j.ood.isp.menu;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.ood.isp.menu.output.StubOutput;
+import ru.job4j.ood.isp.menu.printer.Printer;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -34,5 +36,4 @@ class PrinterTest {
                         + "2.Покормить собаку" + LN
         );
     }
-
 }

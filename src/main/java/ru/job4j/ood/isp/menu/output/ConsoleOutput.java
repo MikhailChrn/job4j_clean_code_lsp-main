@@ -1,4 +1,6 @@
-package ru.job4j.ood.isp.menu;
+package ru.job4j.ood.isp.menu.output;
+
+import ru.job4j.ood.isp.menu.Output;
 
 public class ConsoleOutput implements Output {
     @Override

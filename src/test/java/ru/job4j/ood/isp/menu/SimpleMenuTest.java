@@ -33,10 +33,13 @@ public class SimpleMenuTest {
     }
 
     @Test
-    public void whenSendRequestToEmptyMenu() {
+    public void whenAtTheFirstSendRequestToNonExistentPosition() {
         Menu menu = new SimpleMenu();
-        menu.add(Menu.ROOT, "Покормить собаку", STUB_ACTION);
+        menu.add(Menu.ROOT, "Заправить автомобиль", STUB_ACTION);
         assertThat(Optional.empty())
-                .isEqualTo(menu.select("Сходить в магазин"));
+                .isEqualTo(menu.select("Съездить в магазин"));
+        assertThat(new Menu.MenuItemInfo(
+                "Заправить автомобиль", List.of(), STUB_ACTION, "1."))
+                .isEqualTo(menu.select("Заправить автомобиль").get());
     }
 }

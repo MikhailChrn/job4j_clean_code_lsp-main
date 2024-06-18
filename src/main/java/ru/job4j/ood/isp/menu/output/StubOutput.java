@@ -1,4 +1,6 @@
-package ru.job4j.ood.isp.menu;
+package ru.job4j.ood.isp.menu.output;
+
+import ru.job4j.ood.isp.menu.Output;
 
 public class StubOutput implements Output {
     private final StringBuilder buffer = new StringBuilder();

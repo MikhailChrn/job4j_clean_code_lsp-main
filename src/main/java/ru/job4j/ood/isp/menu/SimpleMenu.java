@@ -4,19 +4,20 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SimpleMenu implements Menu {
+    public static final ActionDelegate STUB_ACTION = System.out::println;
 
     private final List<MenuItem> rootElements = new ArrayList<>();
 
     @Override
     public boolean add(String parentName, String childName, ActionDelegate actionDelegate) {
-          if (findItem(childName).isPresent()) {
+        if (findItem(childName).isPresent()) {
             return false;
         }
         if (Objects.equals(Menu.ROOT, parentName)) {
             rootElements.add(new SimpleMenuItem(childName, actionDelegate));
         } else {
-            findItem(parentName).get().menuItem
-                    .getChildren()
+            findItem(parentName).get()
+                    .menuItem.getChildren()
                     .add(new SimpleMenuItem(childName, actionDelegate));
         }
         return true;
@@ -37,7 +38,6 @@ public class SimpleMenu implements Menu {
         return menuItemInfo;
     }
 
-    @Override
     public Iterator<MenuItemInfo> iterator() {
         return new Iterator<>() {
             private DFSIterator dfsIterator = new DFSIterator();

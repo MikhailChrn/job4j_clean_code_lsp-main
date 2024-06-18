@@ -1,4 +1,8 @@
-package ru.job4j.ood.isp.menu;
+package ru.job4j.ood.isp.menu.printer;
+
+import ru.job4j.ood.isp.menu.Menu;
+import ru.job4j.ood.isp.menu.MenuPrinter;
+import ru.job4j.ood.isp.menu.Output;
 
 public class Printer implements MenuPrinter {
 
