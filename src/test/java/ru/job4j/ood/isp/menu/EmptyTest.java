@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Тестирование работы git.
+ * Добавлен комментарий
  */
 
 public class EmptyTest {
