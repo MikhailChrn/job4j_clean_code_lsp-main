@@ -4,7 +4,12 @@ import org.junit.jupiter.api.Test;
 
 public class GitStashEmptyTest {
     @Test
-    void whenSecondEmptyTest(){
+    void whenSecondEmptyTest() {
         
+    }
+
+    @Test
+    void whenFirstEmptyTest() {
+
     }
 }
